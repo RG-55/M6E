@@ -1,0 +1,25 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+
+
+                {% block content %}
+                <div class="col-12">
+                    <table class="table table-striped mb-5">
+                        <thead>
+                            <th scope="col"> Name </th>
+                            <th scope="col">  </th>
+                        </thead>
+                        <tbody>
+                            {% for d in Account %}
+                            <tr>
+                                <td> {{ d.name }} </td>
+                                <td><a href="{% url 'manage_account' pk=d.pk %}"  class="btn btn-dark">Manage</button></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endblock %}
+
+            

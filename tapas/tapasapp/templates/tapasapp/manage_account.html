@@ -1,0 +1,19 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-8">
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title"> Manage: {{d.name}}</h5>
+        </div>
+        <div class="card-body">
+            <a href="{% url 'change_password' pk=d.pk %}"  class="btn btn-success">Change password</a>
+            <a href="{% url 'login' %}"  class="btn btn-danger">Delete account</a>
+            <a href="{% url 'basic_list'}"  class="btn btn-success">Back</a> 
+        </div>
+    </div>
+
+</div>
+{% endblock %}
